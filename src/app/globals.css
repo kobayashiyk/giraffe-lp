@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-dark-green: #0B4D35;
+  --color-mid-green: #15734E;
+  --color-bright-green: #22C55E;
+  --color-light-green: #ECFDF5;
+  --color-bg-white: #F8FAFB;
+  --color-accent-yellow: #FDE047;
+  --color-navy: #0F172A;
+  --font-sans: var(--font-noto-sans-jp);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Card hover */
+@media (hover: hover) {
+  .card-lift {
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .card-lift:hover {
+    transform: translateY(-8px);
+    box-shadow:
+      0 32px 64px -16px rgba(11, 77, 53, 0.10),
+      0 8px 16px -8px rgba(11, 77, 53, 0.06);
+  }
+}
+
+/* Accordion */
+.accordion-grid {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.accordion-grid.is-open {
+  grid-template-rows: 1fr;
+}
+
+/* Dot pattern */
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(34,197,94,0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
