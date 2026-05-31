@@ -25,16 +25,16 @@ export default function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl font-black leading-tight tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl">
-            入札情報、多すぎて
+          <h1 className="text-4xl font-medium leading-tight tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl">
+            公募案件分析AIで、
             <br />
-            <span className="bg-gradient-to-r from-dark-green to-bright-green bg-clip-text text-transparent">追えていますか？</span>
+            <span className="bg-gradient-to-r from-dark-green to-bright-green bg-clip-text text-transparent">営業を変革する。</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-gray-500 md:mt-8 md:text-lg">
-            毎日大量の入札情報をチェックして、本当に欲しい案件を見落としていませんか？
+            情報は「たくさん見る」時代から、「必要なものだけ届く」時代へ。
             <br className="hidden md:block" />
-            GIRAFFEなら、AIが<span className="font-semibold text-gray-900">御社に合う案件だけ</span>を届けます。
+            毎日の入札情報チェックを<span className="font-semibold text-gray-900">AIに任せて</span>、提案に集中する。
           </p>
 
           {/* CTA */}
